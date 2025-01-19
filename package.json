@@ -1,0 +1,24 @@
+{
+  "name": "movie_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andantecode/movie_app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andantecode/movie_app/issues"
+  },
+  "homepage": "https://github.com/andantecode/movie_app#readme",
+  "description": "",
+  "devDependencies": {
+    "parcel": "^2.13.3"
+  }
+}
