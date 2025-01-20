@@ -1,4 +1,5 @@
 import { Component } from "../core/dante"
+import aboutStore from "../store/about"
 
 export default class TheFooter extends Component {
     constructor() {
@@ -7,14 +8,15 @@ export default class TheFooter extends Component {
         })
     }
     render() {
+        const { github, repository } = aboutStore.state
         this.el.innerHTML = /* html */ `
             <div>
-                <a href="https://github.com/andantecode/movie_app">
+                <a href="${repository}" target="_blank">
                     GitHub Repository
                 </a>
             </div>
             <div>
-                <a href="https://andantecode.github.io">
+                <a href="${github}" target="_blank">
                     ${new Date().getFullYear()}
                     ANDANTECODE
                 </a>
