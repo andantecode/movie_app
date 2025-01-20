@@ -10,7 +10,7 @@ export default class MovieItem extends Component {
     render() {
         const { movie } = this.props
 
-        this.el.setAttribute("href", `#/movie?id${movie.imdbID}`)
+        this.el.setAttribute("href", `#/movie?id=${movie.imdbID}`)
         this.el.classList.add("movie")
         this.el.style.backgroundImage = `url(${movie.Poster})` // 동일 크기로 출력하기 위해
         this.el.innerHTML = /* html */ `

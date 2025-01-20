@@ -28,7 +28,7 @@ function routeRender(routes) {
     }
 
     const routerView = document.querySelector("router-view")
-    // http://lcoalhost:1234/#/about?name=dante
+    // http://localhost:1234/#/about?name=dante
     const [hash, queryString = ""] = location.hash.split("?")
 
     // a=123&b=456
