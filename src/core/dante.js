@@ -71,8 +71,11 @@ export class Store {
             Object.defineProperty(this.state, key, {
                 get: () => state[key], // state["message"]
                 set: val => { 
-                    state[key] = val,
-                    this.observers[key].forEach(observer => observer(val))
+                    state[key] = val
+                    // 호출할 콜백이 있는 경우
+                    if (Array.isArray(this.observers[key])) {
+                        this.observers[key].forEach(observer => observer(val))
+                    }
                 }
             })
         }
