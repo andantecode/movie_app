@@ -44,7 +44,8 @@ function routeRender(routes) {
 
     history.replaceState(query, "") // 3번째 생략 -> 1번 인수가 history.state에 채워짐
 
-    const currentRoute = routes.find(route => new RegExp(`${route.path}/?$`).test(hash))
+    const currentRoute = routes
+        .find(route => new RegExp(`${route.path}/?$`).test(hash))
     routerView.innerHTML = ""
     routerView.append(new currentRoute.component().el)
 
