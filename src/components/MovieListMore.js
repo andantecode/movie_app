@@ -18,6 +18,7 @@ export default class MovieListMore extends Component {
         this.el.textContent = "View more.."
 
         this.el.addEventListener("click", async () => {
+            this.el.classList.add("hide") // 2번 누르기 방지
             await searchMovies(movieStore.state.page + 1)
         })
     }
